@@ -20,7 +20,7 @@ export default function Header() {
           Read
         </Link>
         <Link
-          href={"/about"}
+          href={"/error"}
           className="font-medium text-sm md:text-base lg:text-lg hover:text-main-blue dark:hover:text-amber-500 transition-colors"
         >
           About

@@ -30,7 +30,7 @@ export default function Blog({ title, body, tags, reactions, id }) {
               {tag}
             </span>
           ))}
-          <span className="text-xs text-main-gray dark:text-main-white font-medium bg-main-gray/10 dark:bg-white/10 px-3 py-1 rounded-xl">
+          <span className="text-xs text-main-gray dark:text-main-white font-medium bg-main-gray/10 dark:bg-main/10 px-3 py-1 rounded-xl">
             {reactions} min read
           </span>
         </div>

@@ -21,12 +21,14 @@ export default async function BlogPage({ params }) {
       <>
         <div className="max-w-4xl relative w-full h-60">
           <Image
-            src={`https://picsum.photos/960/400?random=${params.id}`}
+            className=""
+            src={`https://picsum.photos/960/400?random=${params.id} `}
             alt={title}
             className="rounded-lg object-cover relative"
             fill
           />
-          <span className="text-xs bottom-2 left-2  text-main-white dark:text-main-white font-medium  bg-main-gray/10  dark:bg-white/10 px-3 py-1 rounded-xl absolute">
+
+          <span className="text-xs bottom-2 right-2  text-main-white dark:text-main-black font-medium bg-main-black  dark:bg-white px-3 py-1 rounded-xl absolute">
             {reactions} min read
           </span>
         </div>

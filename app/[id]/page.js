@@ -74,7 +74,7 @@ export default async function BlogPage({ params }) {
         <div className="flex flex-col items-center justify-center w-full mt-4 max-w-4xl p-2 space-x-4 space-y-2 hover:bg-main-gray/10 dark:hover:bg-white/10 rounded-xl group transition-all duration-300 ease-in-out">
           <div className="flex items-center justify-center space-x-2">
             <Image
-              src={`https://i.pravatar.cc/150?img=1${id} }`}
+              src={`https://i.pravatar.cc/150?img=${reactions} }`}
               alt={title}
               className="rounded-full object-cover "
               width={40}

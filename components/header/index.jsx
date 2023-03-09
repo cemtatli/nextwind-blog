@@ -26,7 +26,7 @@ export default function Header() {
           About
         </Link>
         <Link
-          href={"https:twitter.com/vaycem"}
+          href={"https://twitter.com/vaycem"}
           target="_blank"
           className="font-medium text-sm md:text-base lg:text-lg hover:text-main-blue dark:hover:text-amber-500 transition-colors"
         >

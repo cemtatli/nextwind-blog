@@ -4,10 +4,15 @@ const nextConfig = {
     appDir: true,
   },
   images: {
+    domains: ["i.pravatar.cc"],
     remotePatterns: [
       {
         protocol: "https",
         hostname: "picsum.photos",
+      },
+      {
+        protocol: "https",
+        hostname: "i.pravatar.cc",
       },
     ],
   },

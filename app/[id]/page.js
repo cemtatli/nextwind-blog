@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import React from "react";
+import { HeartIcon } from "@heroicons/react/24/solid";
 
 async function getPost(id) {
   // id parametresi alıyoruz.
@@ -9,7 +10,7 @@ async function getPost(id) {
 }
 
 export default async function BlogPage({ params }) {
-  const { id, title, body, tags, reactions } = await getPost(params.id);
+  const { id, title, body, tags, reactions, userId } = await getPost(params.id);
 
   if (!id) {
     return notFound();
@@ -26,6 +27,26 @@ export default async function BlogPage({ params }) {
         />
       </div>
       <div className="flex items-center justify-center w-full max-w-4xl p-2 space-x-4">
+        <div className="flex items-center justify-center space-x-2">
+          <Image
+            src={`https://i.pravatar.cc/150?img=${userId}}`}
+            alt={title}
+            className="rounded-full object-cover"
+            width={50}
+            height={50}
+          />
+        </div>
+        <span className="text-sm text-main-gray dark:text-main-white font-medium">
+          {new Date().toLocaleDateString()}
+        </span>
+        <span className="text-sm text-main-gray dark:text-main-white font-medium">
+          {new Date().toLocaleTimeString()}
+        </span>
+        <span className="text-sm text-main-gray dark:text-main-white font-medium flex items-center ">
+          {userId} <HeartIcon className="h-5 w-5 text-red-500 ml-0.5 cursor-pointer" />
+        </span>
+      </div>
+      <div className="flex items-center justify-center w-full max-w-4xl p-2 space-x-4">
         {tags.map((tag) => (
           <span
             key={id}
@@ -38,6 +59,7 @@ export default async function BlogPage({ params }) {
           {reactions} min read
         </span>
       </div>
+
       <div className="flex flex-col items-center justify-center w-full max-w-4xl p-4 space-y-4">
         <h1 className="text-4xl font-bold text-main-black dark:text-main-white">{title}</h1>
         <p className="text-gray-500 ">{body}</p>

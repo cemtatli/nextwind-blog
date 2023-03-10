@@ -6,7 +6,7 @@ export default function Blog({ title, body, tags, reactions, id }) {
   return (
     <Link
       href={`/${id}`}
-      className="flex items-center justify-start gap-4 md:gap-8 w-full py-4 my-4 px-4 hover:bg-main-gray/10 dark:hover:bg-white/10 rounded-xl group transition-all duration-300 ease-in-out"
+      className="flex items-center justify-start gap-4 md:gap-8 w-full py-4 my-4 md:px-6 px-4 hover:bg-main-gray/10 dark:hover:bg-white/10 rounded-xl group transition-all duration-300 ease-in-out"
     >
       <div className="flex items-center justify-start shrink-0">
         <Image

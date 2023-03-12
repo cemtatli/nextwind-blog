@@ -64,7 +64,7 @@ export default async function BlogPage({ params }) {
       </div>
       <div className="flex flex-col items-center justify-center w-full max-w-4xl p-4 space-y-4">
         <h1 className="text-4xl font-bold text-main-black dark:text-main-white">{title}</h1>
-        <p className="text-gray-500 ">{body}</p>
+        <p className="text-gray-500">{body}</p>
       </div>
       <div className="my-10"></div>
       {/* Comment */}
